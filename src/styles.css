@@ -1,11 +1,6 @@
-.text-3xl {
+.heading {
     font-size: 1.875rem;
-}
-
-.font-bold {
     font-weight: 700;
-}
-
-.underline {
     text-decoration: underline;
+    @apply bg-blue-500;
 }
