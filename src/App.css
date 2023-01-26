@@ -1,4 +1,4 @@
-.react-calendar { 
+/* .react-calendar { 
   width: 400px;
   max-width: 100%;
   background-color: #fff;
@@ -84,4 +84,28 @@ abbr[title] {
   border-bottom-right-radius: 6px;
   background: #6f48eb;
   color: white;
- }
+ } */
+
+
+.rbc-day-bg {
+  /* change the background color of the calendar days */
+  background-color: #f8fafc;
+}
+
+.rbc-event {
+  /* change the background color of the calendar events */
+  background-color: #38b2ac;
+  color: white;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+}
+
+.rbc-header {
+  /* change the background color of the calendar header */
+  background-color: #f8fafc;
+}
+
+.rbc-label {
+  /* change the font color of the calendar labels */
+  color: #4a5568;
+}

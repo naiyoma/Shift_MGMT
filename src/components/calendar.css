@@ -1,0 +1,55 @@
+.my-calendar-container .rbc-day-bg {
+  /* change the background color of the calendar days */
+  /* background-color:  yellow; */
+  border-color: transparent !important;
+  font-size: 2rem;
+}
+
+.my-calendar-container .rbc-event {
+  /* change the background color of the calendar events */
+  background-color:  #FF0000;
+  color: white;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+}
+
+.my-calendar-container .rbc-header {
+  /* change the background color of the calendar header */
+  background-color:  grey;
+  /* font-size: 2rem; */
+  background: #6f48eb33;
+ border-radius: 6px;
+ font-weight: bold;
+ color: #6f48eb;
+}
+
+.my-calendar-container .rbc-label {
+  /* change the font color of the calendar labels */
+  color:  green;
+}
+
+.my-calendar .rbc-day-bg {
+  border-color: transparent !important;
+}
+
+.my-calendar .rbc-day-slot .rbc-time-slot {
+  border-color: transparent !important;
+}
+
+.rbc-header {
+  text-align: center;
+  /* font-size: 2rem; */
+}
+
+
+
+.rbc-month-view {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2)
+}
+
+.my-calendar-container .rbc-day-bg.rbc-now {
+  padding: 10px;
+}
+.current-day{
+  padding: 20px;
+}
