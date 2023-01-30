@@ -1,55 +1,108 @@
-.my-calendar-container .rbc-day-bg {
-  /* change the background color of the calendar days */
-  /* background-color:  yellow; */
-  border-color: transparent !important;
-  font-size: 2rem;
+.vertical-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-.my-calendar-container .rbc-event {
-  /* change the background color of the calendar events */
-  background-color:  #FF0000;
-  color: white;
-  border-radius: 0.25rem;
-  padding: 0.5rem;
+body {
+  background: #efefef;
 }
-
-.my-calendar-container .rbc-header {
-  /* change the background color of the calendar header */
-  background-color:  grey;
-  /* font-size: 2rem; */
-  background: #6f48eb33;
- border-radius: 6px;
- font-weight: bold;
- color: #6f48eb;
+.row {
+  display: flex;
+  width: 100%;
 }
-
-.my-calendar-container .rbc-label {
-  /* change the font color of the calendar labels */
-  color:  green;
-}
-
-.my-calendar .rbc-day-bg {
-  border-color: transparent !important;
-}
-
-.my-calendar .rbc-day-slot .rbc-time-slot {
-  border-color: transparent !important;
-}
-
-.rbc-header {
+.calendar {
+  display: block;
+  background: #ffffff;
+  width: 330px;
+  border: solid 1px #cccccc;
+  margin: 10px auto;
+  box-shadow: 0 0 15px 0 #c0c0c0;
+  font-size: 1.3rem;
   text-align: center;
-  /* font-size: 2rem; */
+  border-radius: 8px;
+  padding: 38px;
+  font-size: 16px;
 }
-
-
-
-.rbc-month-view {
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2)
+.calendar header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: default;
+  font-size: 1.4rem;
+  display: block;
+  font-weight: bold;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  color: #00abee;
 }
-
-.my-calendar-container .rbc-day-bg.rbc-now {
-  padding: 10px;
+.calendar header .month-display {
+  align-items: center;
+  height: 40px;
 }
-.current-day{
-  padding: 20px;
+.calendar header .month-label {
+  flex: 1;
+  text-align: left;
+  padding-left: 10px;
+  font-size: 16px;
+}
+.calendar header .arrow {
+  flex-basis: 6%;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.calendar .week:first-child {
+  border-top: none;
+}
+.calendar .day-names {
+  color: #00abee;
+  font-weight: bold;
+  cursor: default;
+  font-size: 16px;
+}
+.calendar .day-names .day {
+  cursor: default;
+}
+.calendar .day-names .day:hover {
+  background: inherit;
+}
+.calendar .day {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  height: 35px;
+  cursor: pointer;
+  transition: all 0.2s;
+  padding: 6px;
+}
+.calendar .day:hover {
+  background: #efefef;
+}
+.calendar .day:first-child {
+  border-left: none;
+}
+.calendar .day.today {
+  background: #d5f3ff;
+  border-radius: 50%;
+  width: 35px;
+  max-width: 35px;
+  height: 35px;
+}
+.calendar .day.different-month {
+  color: #c0c0c0;
+}
+.calendar .day.selected {
+  background: #00abee;
+  color: #ffffff;
+  border-radius: 50%;
+  width: 35px;
+  max-width: 35px;
+  height: 35px;
 }
