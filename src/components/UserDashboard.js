@@ -83,21 +83,36 @@ export default class MyCalendar extends React.Component {
 
   render() {
     return (
-      <section className="calendar">
-        <header className="header">
-          <div className="month-display row">
-               {this.renderMonthLabel()}
-            <i className="arrow fa fa-angle-left" onClick={this.previous}/>
+      // <section className="calendar">
+      //   <header className="header">
+      //     <div className="month-display row">
+      //          {this.renderMonthLabel()}
+      //       <i className="arrow fa fa-angle-left" onClick={this.previous}/>
            
-            <i className="arrow fa fa-angle-right" onClick={this.next}/>
+      //       <i className="arrow fa fa-angle-right" onClick={this.next}/>
+      //     </div>
+      //     <DayNames />
+      //   </header>
+      //   {this.renderWeeks()}
+      // </section>
+      <div class="flex flex-row">
+          <div class="basis-1/4 bg-fuchsia-200">
+            01
           </div>
-          <DayNames />
-        </header>
-        {this.renderWeeks()}
-      </section>
-    );
+          <div class="basis-3/4 bg-fuchsia-900">
+          <div class="flex flex-col-reverse ...">
+            <div class="bg-rose-200">01</div>
+            <div>02</div>
+            <div>03</div>
+          </div>
+          </div>
+      </div>
+      );
   }
 }
+
+
+
 
 class DayNames extends React.Component {
     render() {
