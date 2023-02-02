@@ -107,8 +107,29 @@ body {
   max-width: 35px;
   height: 35px;
 }
-
-
-.flex {
+.profile-div{
   height: 100vh;
+}
+.section-1{
+  width: 50%;
+  float: left;
+  height: 65vh;
+}
+.section-2{
+  width: 50%;
+  float: right;
+  height: 65vh;
+}
+
+.button-container{
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  margin: 0 15px;
+}
+.table-container{
+  width: 100%;
+  height: 60vh;
 }

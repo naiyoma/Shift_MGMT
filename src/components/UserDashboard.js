@@ -83,30 +83,70 @@ export default class MyCalendar extends React.Component {
 
   render() {
     return (
-      // <section className="calendar">
-      //   <header className="header">
-      //     <div className="month-display row">
-      //          {this.renderMonthLabel()}
-      //       <i className="arrow fa fa-angle-left" onClick={this.previous}/>
-           
-      //       <i className="arrow fa fa-angle-right" onClick={this.next}/>
-      //     </div>
-      //     <DayNames />
-      //   </header>
-      //   {this.renderWeeks()}
-      // </section>
-      <div class="flex flex-row">
-          <div class="basis-1/4 bg-fuchsia-200">
-            01
-          </div>
-          <div class="basis-3/4 bg-fuchsia-900">
-          <div class="flex flex-col-reverse ...">
-            <div class="bg-rose-200">01</div>
-            <div>02</div>
-            <div>03</div>
-          </div>
-          </div>
+
+
+    <div class="grid grid-rows-3 grid-flow-col gap-4">
+          <div class="row-span-3 bg-violet-300 profile-div">01</div>
+          <div class="col-span-2 bg-pink-200 column-1  ">02</div>
+          <div class="row-span-2 col-span-2 bg-sky-100">
+          
+      
+      <div class="column-left bg-slate-200 section-1">
+        <section className="calendar">
+            <header className="header">
+              <div className="month-display row">
+                  {this.renderMonthLabel()}
+                <i className="arrow fa fa-angle-left" onClick={this.previous}/>
+              
+                <i className="arrow fa fa-angle-right" onClick={this.next}/>
+              </div>
+              <DayNames />
+            </header>
+            {this.renderWeeks()}
+      </section>
+      <div class="button-container">
+        <button class="bg-transparent hover:bg-purple-500 text-purple-500 font-semibold hover:text-white py-2 px-4 border border-purple-500 hover:border-transparent rounded rounded shadow">
+          Add Event
+        </button>
+        <button class="bg-transparent hover:bg-purple-500 text-purple-500 font-semibold hover:text-white py-2 px-4 border border-purple-500 hover:border-transparent rounded rounded shadow">
+          Swap Shifts
+        </button>
       </div>
+      </div>
+      <div class="column-right bg-orange-100 section-2">
+    <div class="table-container mx-auto p-4 bg-indigo-300">
+      <table class="table-auto w-full h-500">
+    <thead>
+    <h2>Shift Allowance</h2>
+      <tr class="bg-gray-800 text-white">
+        
+        <th class="px-4 py-2">Column 1</th>
+        <th class="px-4 py-2">Column 2</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="bg-gray-100">
+        <td class="border px-4 py-2">Row 1, Column 1</td>
+        <td class="border px-4 py-2">Row 1, Column 2</td>
+      </tr>
+      <tr class="bg-gray-200">
+        <td class="border px-4 py-2">Row 2, Column 1</td>
+        <td class="border px-4 py-2">Row 2, Column 2</td>
+      </tr>
+      <tr class="bg-gray-100">
+        <td class="border px-4 py-2">Row 3, Column 1</td>
+        <td class="border px-4 py-2">Row 3, Column 2</td>
+      </tr>
+      <tr class="bg-gray-200">
+        <td class="border px-4 py-2">Row 4, Column 1</td>
+        <td class="border px-4 py-2">Row 4, Column 2</td>
+      </tr>
+    </tbody>
+  </table>
+    </div>
+      </div>
+      </div>
+    </div>
       );
   }
 }
