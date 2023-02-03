@@ -129,7 +129,18 @@ body {
 button {
   margin: 0 15px;
 }
+
 .table-container{
   width: 100%;
   height: 60vh;
+}
+
+table{
+  margin: 10px auto;
+  padding: 38px;
+}
+
+.wi {
+  padding-right: 8px;
+  size: 4em;
 }

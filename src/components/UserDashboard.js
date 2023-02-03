@@ -1,7 +1,9 @@
 import React from 'react';
 import moment from 'moment'
-import 'react-big-calendar/lib/css/react-big-calendar.css'
 import './calendar.css'
+import 'react-big-calendar/lib/css/react-big-calendar.css'
+import './weather-icons/css/weather-icons.css';
+
 
 export default class MyCalendar extends React.Component {
   constructor(props) {
@@ -86,12 +88,18 @@ export default class MyCalendar extends React.Component {
 
 
     <div class="grid grid-rows-3 grid-flow-col gap-4">
-          <div class="row-span-3 bg-violet-300 profile-div">01</div>
-          <div class="col-span-2 bg-pink-200 column-1  ">02</div>
-          <div class="row-span-2 col-span-2 bg-sky-100">
-          
-      
-      <div class="column-left bg-slate-200 section-1">
+          <div class="row-span-3 bg-violet-300 profile-div">
+            01</div>
+          <div class="col-span-2 bg-pink-200 column-1">
+          <div class="w-2/3 bg-blue-200 column-left">
+            1
+          </div>
+          <div class="w-1/3 bg-indigo-500 column-right">
+            2
+          </div>
+        </div>
+      <div class="row-span-2 col-span-2">
+      <div class="column-left  section-1">
         <section className="calendar">
             <header className="header">
               <div className="month-display row">
@@ -113,37 +121,33 @@ export default class MyCalendar extends React.Component {
         </button>
       </div>
       </div>
-      <div class="column-right bg-orange-100 section-2">
-    <div class="table-container mx-auto p-4 bg-indigo-300">
-      <table class="table-auto w-full h-500">
+      <div class="column-right section-2">
+      <table class="table-auto w-5/6 h-5/6">
     <thead>
-    <h2>Shift Allowance</h2>
-      <tr class="bg-gray-800 text-white">
-        
-        <th class="px-4 py-2">Column 1</th>
-        <th class="px-4 py-2">Column 2</th>
+      <tr class="bg-purple-500 text-white">
+        <th class="px-4 py-2">Shifts</th>
+        <th class="px-4 py-2">Shift Allowance</th>
       </tr>
     </thead>
     <tbody>
       <tr class="bg-gray-100">
-        <td class="border px-4 py-2">Row 1, Column 1</td>
-        <td class="border px-4 py-2">Row 1, Column 2</td>
-      </tr>
-      <tr class="bg-gray-200">
-        <td class="border px-4 py-2">Row 2, Column 1</td>
-        <td class="border px-4 py-2">Row 2, Column 2</td>
+        <td class="border px-4 py-2"><i className="wi wi-night-alt-cloudy-windy"></i>Night Shift</td>
+        <td class="border px-4 py-2">$ 2000</td>
       </tr>
       <tr class="bg-gray-100">
-        <td class="border px-4 py-2">Row 3, Column 1</td>
-        <td class="border px-4 py-2">Row 3, Column 2</td>
+        <td class="border px-4 py-2"><i className="wi wi-stars"></i>Evening Shift</td>
+        <td class="border px-4 py-2">$ 1000</td>
       </tr>
-      <tr class="bg-gray-200">
-        <td class="border px-4 py-2">Row 4, Column 1</td>
-        <td class="border px-4 py-2">Row 4, Column 2</td>
+      <tr class="bg-gray-100">
+        <td class="border px-4 py-2"><i className="wi wi-day-sunny"></i>Afternoon Shift</td>
+        <td class="border px-4 py-2">$ 3000</td>
+      </tr>
+      <tr class="bg-gray-100">
+        <td class="border px-4 py-2"><i className="wi wi-day-haze"></i>Morning Shift</td>
+        <td class="border px-4 py-2">$ 40000</td>
       </tr>
     </tbody>
   </table>
-    </div>
       </div>
       </div>
     </div>
