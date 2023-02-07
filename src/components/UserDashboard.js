@@ -85,19 +85,87 @@ export default class MyCalendar extends React.Component {
 
   render() {
     return (
-
-
-    <div class="grid grid-rows-3 grid-flow-col gap-4">
-          <div class="row-span-3 bg-violet-300 profile-div">
-            01</div>
-          <div class="col-span-2 bg-pink-200 column-1">
-          <div class="w-2/3 bg-blue-200 column-left">
-            1
+    <div class="grid grid-rows-3 grid-flow-col gap-2">
+          <div class="row-span-3 bg-green-200 profile-div w-full">
+            01
           </div>
-          <div class="w-1/3 bg-indigo-500 column-right">
-            2
+          <div class="col-span-2  column-1 ">
+            <div class="flex flex-col md:flex-row h-5/6  border">
+              <div class=" w-3/4 relative overflow-x-auto ">
+              <table class="border-collapse border  w-10/12  content-table relative overflow-x-auto shadow-md sm:rounded-lg text-sm text-left text-gray-500 dark:text-gray-400">
+                    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                      <tr>
+                      <th scope="col" class="p-4">
+                        <div class="flex items-center">
+                          <input id="checkbox-all-search" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"></input>
+                          <label for="checkbox-all-search" class="sr-only">checkbox</label>
+                        </div>
+                      </th>
+                      <th scope="col" class="px-6 py-3">
+                        Shift Title
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Time 
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                          Action
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                <td class="w-4 p-4">
+                    <div class="flex items-center">
+                        <input id="checkbox-table-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"></input>
+                        <label for="checkbox-table-1" class="sr-only">checkbox</label>
+                    </div>
+                </td>
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    Apple MacBook Pro 17"
+                </th>
+                <td class="px-6 py-4">
+                    Sliver
+                </td>
+                <td class="px-6 py-4">
+                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                </td>
+                </tr>
+                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                <td class="w-4 p-4">
+                    <div class="flex items-center">
+                        <input id="checkbox-table-2" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"></input>
+                        <label for="checkbox-table-2" class="sr-only">checkbox</label>
+                    </div>
+                </td>
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    Microsoft Surface Pro
+                </th>
+                <td class="px-6 py-4">
+                    White
+                </td>
+                <td class="px-6 py-4">
+                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                </td>
+            </tr>
+                    </tbody>
+                  </table>
+              </div>
+              <div class="details-2 ">
+              <div class=" border  hours">
+                <p class="font-sans text-2xl subpixel-antialiased font-bold text-center mt-3.5">Total</p>
+                <p class="font-sans text-2xl subpixel-antialiased font-bold text-center">Hours</p>
+                <p class="font-sans text-2xl subpixel-antialiased italic text-center mt-6">8</p>
+              </div>
+              <div class="shifts">
+                <p class="font-sans text-2xl subpixel-antialiased font-bold text-center mt-3.5">Total</p>
+                <p class="font-sans text-2xl subpixel-antialiased font-bold text-center ">Shifts</p>
+                <p class="font-sans text-2xl subpixel-antialiased italic text-center mt-6">9</p>
+              </div>
+              </div>
+            </div>
           </div>
-        </div>
+    
+
       <div class="row-span-2 col-span-2">
       <div class="column-left  section-1">
         <section className="calendar">
