@@ -174,3 +174,12 @@ table{
 .shifts{
   width: 121px;
 }
+
+.profile-image{
+  margin-top: 27px;
+}
+
+.user-icon{
+  font-Size: 30px;
+  width: 18px;
+}
