@@ -182,4 +182,27 @@ table{
 .user-icon{
   font-Size: 30px;
   width: 18px;
+  margin-right: 20px;
+}
+.dep-icon{
+  font-Size: 30px;
+  width: 18px;
+  margin-right: 36px;
+  
+}
+.pos-icon{
+  font-Size: 30px;
+  width: 18px;
+  margin-right: 53px;
+}
+.user-profile-details{
+  margin-top: 50px;
+}
+.button-prifile{
+  margin-top: 27px;
+}
+
+.profile-image::before{
+  background-color: violet;
+  border-radius: 50% 50% 0 50%;
 }

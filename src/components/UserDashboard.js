@@ -1,10 +1,16 @@
 import React from 'react';
-import moment from 'moment'
-import './calendar.css'
-import 'react-big-calendar/lib/css/react-big-calendar.css'
+import moment from 'moment';
+import './calendar.css';
+import 'react-big-calendar/lib/css/react-big-calendar.css';
 import './weather-icons/css/weather-icons.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { faBuilding } from '@fortawesome/free-solid-svg-icons';
+import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faCog } from '@fortawesome/free-solid-svg-icons';
+import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
+
 
 export default class MyCalendar extends React.Component {
   constructor(props) {
@@ -86,31 +92,39 @@ export default class MyCalendar extends React.Component {
   render() {
     return (
     <div class="grid grid-rows-3 grid-flow-col gap-2">
-          <div class="row-span-3 bg-green-200 profile-div w-72">
-          <div class="flex flex-col items-center justify-between bg-green-200 w-36 rounded-sm profile-image">
+          <div class="row-span-3  profile-div w-72 border-r-4 border-indigo-500 ">
+          <div class="flex flex-col items-center justify-between w-36 rounded-sm profile-image bg-violet-800">
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLivrKVFYBG5-dEeF_xB25T5BSDG6W-ooA9w&usqp=CAU" alt="User Image" class=" h-32 rounded-full object-cover"></img>
             </div>
-          
-          <div class="divide-y divide-slate-200 border-current ...">
-          <div class="text-center mt-4">
-          <FontAwesomeIcon icon={faUser} class="inline-block ml-2 user-icon" />
-            <h3 class="text-lg font-medium inline-block">UserName: Mona lisa</h3>
+          <div class="divide-y border-current user-profile-details ...">
+          <div class="text-center mt-4 h-7">
+          <FontAwesomeIcon icon={faUser} class="inline-block user-icon" />
+            <h3 class="text-lg font-medium inline-block ">Username: Mona lisa</h3>
           </div>
-          <div class="text-center mt-4">
-          <FontAwesomeIcon icon={faUser} class="inline-block ml-2 user-icon" />
-            <h3 class="text-lg font-medium inline-block">PhoneNumber: +254702718830</h3>
+          <div class="text-center mt-4 h-12">
+          <FontAwesomeIcon icon={faBuilding} class="inline-block ml-2 dep-icon" />
+            <h3 class="text-lg font-medium inline-block mt-3.5">Department: Sales</h3>
           </div>
-          <div class="text-center mt-4">
-          <FontAwesomeIcon icon={faUser} class="inline-block ml-2 user-icon" />
-            <h3 class="text-lg font-medium inline-block">UserName: Mona lisa</h3>
+          <div class="text-center mt-4 h-12">
+          <FontAwesomeIcon icon={faBriefcase} class="inline-block ml-2 pos-icon" />
+            <h3 class="text-lg font-medium inline-block mt-3.5">Position: Junior</h3>
           </div>
-          <div class="text-center mt-4">
-          <FontAwesomeIcon icon={faUser} class="inline-block ml-2 user-icon" />
-            <h3 class="text-lg font-medium inline-block">UserName: Mona lisa</h3>
+          <div class="text-center mt-4 h-12">
+          <FontAwesomeIcon icon={faEnvelope} class="inline-block ml-2 user-icon" />
+            <h3 class="text-lg font-medium inline-block mt-3.5">Phone:0702781830</h3>
           </div>
-          <div class="text-center mt-4">
-          <FontAwesomeIcon icon={faUser} class="inline-block ml-2 user-icon" />
-            <h3 class="text-lg font-medium inline-block">UserName: Mona lisa</h3>
+          <div class="text-center mt-4 h-12">
+          <FontAwesomeIcon icon={faCog} class="inline-block ml-2 user-icon" />
+            <h3 class="text-lg font-medium inline-block mt-3.5">Settings: Mona lisa</h3>
+          </div>
+          <div class="text-center mt-4 h-12">
+          <FontAwesomeIcon icon={faSignOutAlt} class="inline-block ml-2 user-icon" />
+            <h3 class="text-lg font-medium inline-block mt-3.5">Log out: Mona lisa</h3>
+          </div>
+          <div class="text-center mt-4 h-12 button-edit">
+            <div class="button-prifile">
+              <button class="rounded-full bg-purple-600 w-28 h-9">Save Changes</button>
+            </div>
           </div>
           </div>
           </div>
