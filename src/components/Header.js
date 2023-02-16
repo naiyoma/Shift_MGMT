@@ -1,5 +1,5 @@
 import React from 'react';
-import './../styles.css';
+import './homepage.css';
 function Header() {
     return(
         <h1 className="heading">Hello World</h1>

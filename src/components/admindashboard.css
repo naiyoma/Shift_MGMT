@@ -1,0 +1,29 @@
+.days-columns{
+    height: 60px;
+    width: 200px;
+}
+
+.rows-days{
+    background-color: antiquewhite;
+}
+.column-01{
+    width: 222px;
+}
+
+.first-column{
+    width: 200px;
+}
+.column-02{
+    width:158px ;
+
+}
+.employee-name{
+    font-weight: bold;
+    margin-top: 19px;
+    margin-left: 20px;
+}
+.shift-time{
+    font-weight: 420;
+    margin-left: 20px;
+    margin-top: 30px;
+}

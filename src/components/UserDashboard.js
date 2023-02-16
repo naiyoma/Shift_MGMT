@@ -91,11 +91,13 @@ export default class MyCalendar extends React.Component {
   }
   render() {
     return (
-    <div class="grid grid-rows-3 grid-flow-col gap-2">
-          <div class="row-span-3  profile-div w-72 border-r-4 border-indigo-500 ">
-          <div class="flex flex-col items-center justify-between w-36 rounded-sm profile-image bg-violet-800">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLivrKVFYBG5-dEeF_xB25T5BSDG6W-ooA9w&usqp=CAU" alt="User Image" class=" h-32 rounded-full object-cover"></img>
+    <div class="grid grid-rows-3 grid-flow-col gap-1">
+          <div class="row-span-3  profile-div w-72 border-r-4">
+          <div class="bg-purple-700 rounded-b h-24 round-image cover-image-up">
+          <div class="flex flex-col items-center justify-between w-36 rounded-sm profile-image ">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLivrKVFYBG5-dEeF_xB25T5BSDG6W-ooA9w&usqp=CAU" alt="User Image" class=" h-32 rounded-full object-cover user-image"></img>
             </div>
+          </div>
           <div class="divide-y border-current user-profile-details ...">
           <div class="text-center mt-4 h-7">
           <FontAwesomeIcon icon={faUser} class="inline-block user-icon" />
@@ -106,8 +108,8 @@ export default class MyCalendar extends React.Component {
             <h3 class="text-lg font-medium inline-block mt-3.5">Department: Sales</h3>
           </div>
           <div class="text-center mt-4 h-12">
-          <FontAwesomeIcon icon={faBriefcase} class="inline-block ml-2 pos-icon" />
-            <h3 class="text-lg font-medium inline-block mt-3.5">Position: Junior</h3>
+          <FontAwesomeIcon icon={faBriefcase} class="inline-block ml-2 position-icon" />
+            <h3 class="text-lg font-medium inline-block mt-3.5 ">Location: Kenya</h3>
           </div>
           <div class="text-center mt-4 h-12">
           <FontAwesomeIcon icon={faEnvelope} class="inline-block ml-2 user-icon" />
@@ -123,15 +125,15 @@ export default class MyCalendar extends React.Component {
           </div>
           <div class="text-center mt-4 h-12 button-edit">
             <div class="button-prifile">
-              <button class="rounded-full bg-purple-600 w-28 h-9">Save Changes</button>
+              <button class="text-white rounded-full bg-purple-700 w-28 h-9">Edit Profile</button>
             </div>
           </div>
           </div>
           </div>
-          <div class="col-span-2  column-1 ">
-            <div class="flex flex-col md:flex-row h-5/6  border">
-              <div class=" w-3/4 relative overflow-x-auto ">
-              <table class="border-collapse border  w-10/12  content-table relative overflow-x-auto shadow-md sm:rounded-lg text-sm text-left text-gray-500 dark:text-gray-400">
+          <div class="col-span-2  column-1">
+            <div class="flex flex-col md:flex-row h-5/6  border inner-container">
+              <div class=" w-full relative overflow-x-auto ">
+              <table class="border-collapse border  w-full h-full  content-table relative overflow-x-auto shadow-md sm:rounded-lg text-sm text-left text-gray-500 dark:text-gray-400">
                     <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                       <tr>
                       <th scope="col" class="p-4">
@@ -166,7 +168,7 @@ export default class MyCalendar extends React.Component {
                     Sliver
                 </td>
                 <td class="px-6 py-4">
-                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                    <a href="#" class="font-medium text-purple-700 dark:text-purple-700 hover:underline">Edit</a>
                 </td>
                 </tr>
                 <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
@@ -183,7 +185,7 @@ export default class MyCalendar extends React.Component {
                     White
                 </td>
                 <td class="px-6 py-4">
-                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                    <a href="#" class="font-medium text-purple-700 dark:text-purple-700 hover:underline">Edit</a>
                 </td>
             </tr>
                     </tbody>
@@ -207,7 +209,7 @@ export default class MyCalendar extends React.Component {
 
       <div class="row-span-2 col-span-2">
       <div class="column-left  section-1">
-        <section className="calendar">
+        <section className="calendar bg-purple-700">
             <header className="header">
               <div className="month-display row">
                   {this.renderMonthLabel()}
@@ -220,10 +222,10 @@ export default class MyCalendar extends React.Component {
             {this.renderWeeks()}
       </section>
       <div class="button-container">
-        <button class="bg-transparent hover:bg-purple-500 text-purple-500 font-semibold hover:text-white py-2 px-4 border border-purple-500 hover:border-transparent rounded rounded shadow">
+        <button class="bg-transparent hover:bg-purple-700 text-purple-700 font-semibold hover:text-white py-2 px-4 border border-purple-700 hover:border-transparent rounded rounded shadow">
           Add Event
         </button>
-        <button class="bg-transparent hover:bg-purple-500 text-purple-500 font-semibold hover:text-white py-2 px-4 border border-purple-500 hover:border-transparent rounded rounded shadow">
+        <button class="bg-transparent hover:bg-purple-700 text-purple-700 font-semibold hover:text-white py-2 px-4 border border-purple-700 hover:border-transparent rounded rounded shadow">
           Swap Shifts
         </button>
       </div>
@@ -231,7 +233,7 @@ export default class MyCalendar extends React.Component {
       <div class="column-right section-2">
       <table class="table-auto w-5/6 h-5/6">
     <thead>
-      <tr class="bg-purple-500 text-white">
+      <tr class="bg-purple-700 text-white">
         <th class="px-4 py-2">Shifts</th>
         <th class="px-4 py-2">Shift Allowance</th>
       </tr>
