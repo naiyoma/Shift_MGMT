@@ -1,0 +1,22 @@
+.columns-home-02{
+    height: 500px;
+}
+.banner-image{
+    margin-top: 25px;
+    margin-left: 32px;
+    height: 400px;
+}
+.banner-title{
+    font-size: 40px;
+    font-weight: 200px;
+    margin-top: 65px;
+    margin-left: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.container-email{
+    width: 559px;
+    height: 69px;
+    margin-top: 55px;
+    margin-left: 40px;
+    border-radius: 22px;
+}
