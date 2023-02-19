@@ -93,7 +93,7 @@ export default class MyCalendar extends React.Component {
     return (
     <div class="grid grid-rows-3 grid-flow-col gap-1">
           <div class="row-span-3  profile-div w-72 border-r-4">
-          <div class="bg-purple-700 rounded-b h-24 round-image cover-image-up">
+          <div class="bg-fuchsia-900 rounded-b h-24 round-image cover-image-up">
           <div class="flex flex-col items-center justify-between w-36 rounded-sm profile-image ">
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLivrKVFYBG5-dEeF_xB25T5BSDG6W-ooA9w&usqp=CAU" alt="User Image" class=" h-32 rounded-full object-cover user-image"></img>
             </div>
@@ -125,7 +125,7 @@ export default class MyCalendar extends React.Component {
           </div>
           <div class="text-center mt-4 h-12 button-edit">
             <div class="button-prifile">
-              <button class="text-white rounded-full bg-purple-700 w-28 h-9">Edit Profile</button>
+              <button class="text-white rounded-full bg-fuchsia-900 w-28 h-9">Edit Profile</button>
             </div>
           </div>
           </div>
@@ -168,7 +168,7 @@ export default class MyCalendar extends React.Component {
                     Sliver
                 </td>
                 <td class="px-6 py-4">
-                    <a href="#" class="font-medium text-purple-700 dark:text-purple-700 hover:underline">Edit</a>
+                    <a href="#" class="font-medium text-fuchsia-900 dark:text-fuchsia-900 hover:underline">Edit</a>
                 </td>
                 </tr>
                 <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
@@ -185,7 +185,7 @@ export default class MyCalendar extends React.Component {
                     White
                 </td>
                 <td class="px-6 py-4">
-                    <a href="#" class="font-medium text-purple-700 dark:text-purple-700 hover:underline">Edit</a>
+                    <a href="#" class="font-medium text-fuchsia-900 dark:text-fuchsia-900 hover:underline">Edit</a>
                 </td>
             </tr>
                     </tbody>
@@ -209,7 +209,7 @@ export default class MyCalendar extends React.Component {
 
       <div class="row-span-2 col-span-2">
       <div class="column-left  section-1">
-        <section className="calendar bg-purple-700">
+        <section className="calendar bg-fuchsia-900">
             <header className="header">
               <div className="month-display row">
                   {this.renderMonthLabel()}
@@ -222,10 +222,10 @@ export default class MyCalendar extends React.Component {
             {this.renderWeeks()}
       </section>
       <div class="button-container">
-        <button class="bg-transparent hover:bg-purple-700 text-purple-700 font-semibold hover:text-white py-2 px-4 border border-purple-700 hover:border-transparent rounded rounded shadow">
+        <button class="bg-transparent hover:bg-fuchsia-900 text-fuchsia-900 font-semibold hover:text-white py-2 px-4 border border-fuchsia-900 hover:border-transparent rounded rounded shadow">
           Add Event
         </button>
-        <button class="bg-transparent hover:bg-purple-700 text-purple-700 font-semibold hover:text-white py-2 px-4 border border-purple-700 hover:border-transparent rounded rounded shadow">
+        <button class="bg-transparent hover:bg-fuchsia-900 text-fuchsia-900 font-semibold hover:text-white py-2 px-4 border border-fuchsia-900 hover:border-transparent rounded rounded shadow">
           Swap Shifts
         </button>
       </div>
@@ -233,7 +233,7 @@ export default class MyCalendar extends React.Component {
       <div class="column-right section-2">
       <table class="table-auto w-5/6 h-5/6">
     <thead>
-      <tr class="bg-purple-700 text-white">
+      <tr class="bg-fuchsia-900 text-white">
         <th class="px-4 py-2">Shifts</th>
         <th class="px-4 py-2">Shift Allowance</th>
       </tr>

@@ -36,7 +36,7 @@ body {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  color: 	#4C0099;
+  color: 	#581845;
 }
 .calendar header .month-display {
   align-items: center;
@@ -62,7 +62,7 @@ body {
   border-top: none;
 }
 .calendar .day-names {
-  color: 	#4C0099;
+  color: 	#581845;
   font-weight: bold;
   cursor: default;
   font-size: 16px;
@@ -100,7 +100,7 @@ body {
   color: #c0c0c0;
 }
 .calendar .day.selected {
-  background: #4C0099;
+  background: #581845;
   color: #ffffff;
   border-radius: 50%;
   width: 35px;
@@ -199,6 +199,7 @@ table{
 }
 .user-image{
   margin-top: 20px;
+  margin-left: 140px;
 }
 
 

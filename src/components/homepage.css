@@ -14,9 +14,25 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .container-email{
-    width: 559px;
+    width: 550px;
     height: 69px;
     margin-top: 55px;
     margin-left: 40px;
+    border-radius: 26px;
+}
+
+.search-bar{
     border-radius: 22px;
+    width:270px;
+    margin-top: 14px;
+    height: 40px;
+    margin-left: 20px;
+}
+
+.button-trial{
+    border-radius: 22px;
+    width:200px;
+    height: 40px;
+    margin-top: 14px;
+    margin-left: 34px
 }

@@ -144,7 +144,7 @@ const Signup = () => {
                             </div>
                           
                             <div className="flex items-center mt-4">
-                                <button className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-purple-700 rounded-md hover:bg-purple-600 focus:outline-none focus:bg-purple-600">
+                                <button className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-fuchsia-900 rounded-md hover:bg-purple-600 focus:outline-none focus:bg-purple-600">
                                     Register
                                 </button>
                             </div>
@@ -152,7 +152,7 @@ const Signup = () => {
                         <div className="mt-4 text-grey-600">
                             Already have an account?{" "}
                             <span>
-                                <a className="text-purple-600 hover:underline" href="#">
+                                <a className="text-fuchsia-900 hover:underline" href="#">
                                     Log in
                                 </a>
                             </span>
