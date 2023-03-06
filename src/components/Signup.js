@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 
@@ -11,9 +11,26 @@ const Signup = () => {
     const [password, setPassword] = useState("");
     const [department, setDepartment] = useState("");
     const [position, setPosition] = useState("");
-    // const [organization, setOrganization] = useState("");
+    const [organizations, setOrganizations] = useState([]);
+    const [selectedOrganization, setSelectedOrganization] = useState('');
+    
 
     const navigate = useNavigate();
+
+
+    useEffect(() => {
+        axios.get("https://web-production-fc54.up.railway.app/api/orgs/")
+            .then((response) => {
+                setOrganizations(response.data);
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+    }, []);
+    
+    const handleOrganizationChange = (event) => {
+        setSelectedOrganization(event.target.value);
+    };
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -24,10 +41,10 @@ const Signup = () => {
             is_staff: false,
             department: department,
             position: position,
-            // organization: organization,
+            
         };
         axios
-        .post("https://naiyoma.pythonanywhere.com/api/createuser/", JSON.stringify(data), {
+        .post("https://web-production-fc54.up.railway.app/api/createuser/", JSON.stringify(data), {
                 headers: {
                     'Content-Type': 'application/json'
                 }
@@ -35,7 +52,7 @@ const Signup = () => {
         )
         .then((response) => {
             console.log(response);
-            navigate("/");
+            navigate("/login");
         })
         .catch((error) => {
             console.error(error);
@@ -61,6 +78,7 @@ const Signup = () => {
                                         value={username}
                                         onChange={(event) => setUsername(event.target.value)}
                                         className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                        required
                                     />
                                 </div>
                             </div>
@@ -77,7 +95,9 @@ const Signup = () => {
                                         name="email"
                                         value = {email}
                                         onChange={(event) => setEmail(event.target.value)}
-                                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"                                    />
+                                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" 
+                                        required
+                                        />
                                 </div>
                             </div>
                             <div className="mt-4">
@@ -93,7 +113,9 @@ const Signup = () => {
                                         name="password"
                                         value = {password}
                                         onChange={(event) => setPassword(event.target.value)}
-                                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"                                    />
+                                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                        required
+                                        />
                                 </div>
                             </div>
                             <div className="mt-4">
@@ -107,7 +129,9 @@ const Signup = () => {
                                     <input
                                         type="password"
                                         name="password_confirmation"
-                                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"                                    />
+                                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                        required
+                                        />
                                 </div>
                             </div>
                             <div className="mt-4">
@@ -123,26 +147,46 @@ const Signup = () => {
                                         name="password_confirmation"
                                         value = {department}
                                         onChange={(event) => setDepartment(event.target.value)}
-                                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"                                    />
+                                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                        required
+                                        />
                                 </div>
                             </div>
                             <div className="mt-4">
-                                <label
-                                    htmlFor="password_confirmation"
-                                    className="block text-gray-700 text-sm font-bold mb-2"
-                                >
+                                <label htmlFor="organization" className="block text-gray-700 text-sm font-bold mb-2">
                                     Organization
                                 </label>
                                 <div className="flex flex-col items-start">
-                                    <input
-                                        type="password"
-                                        name="password_confirmation"
-                                        value = {position}
-                                        onChange={(event) => setPosition(event.target.value)}
-                                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"                                    />
+                                    {/* <select
+                                        name="organization"
+                                        value={selectedOrganizations}
+                                        onChange={(event) => setSelectedOrganization(event.target.value)}
+                                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                        required
+                                    >
+                                        <option value="">Select an organization</option>
+                                        {organizations.map((org) => (
+                                            <option key={org.id} value={org.id}>
+                                                {org.name}
+                                            </option>
+                                        ))}
+
+                                    </select> */}
+                                     <select
+                                        name="organization"
+                                        value={selectedOrganization} 
+                                        onChange={handleOrganizationChange}
+                                        // className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                        required
+                                        >
+                                        {organizations.map((org) => (
+                                            <option key={org.id} value={org.name}>
+                                                {org.name}
+                                            </option>
+                                        ))}
+                                    </select>
                                 </div>
                             </div>
-                          
                             <div className="flex items-center mt-4">
                                 <button className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-fuchsia-900 rounded-md hover:bg-purple-600 focus:outline-none focus:bg-purple-600">
                                     Register

@@ -6,13 +6,14 @@ import axios from 'axios';
 const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [errorMessage, setErrorMessage] = useState("");
     const navigate = useNavigate();
 
     const handleSubmit = (event) => {
         event.preventDefault();
         const data = {
-            email: email,
-            password: password,
+          email: email,
+          password: password,
         };
         axios
         .post("https://naiyoma.pythonanywhere.com/api/login/", JSON.stringify(data), {
@@ -22,14 +23,19 @@ const Login = () => {
             }
         )
         .then((response) => {
-            console.log(response);
-            navigate("/");
-        })
+            if (response.status === 200) {
+                console.log(response);
+                navigate("/");
+            } else {
+                setErrorMessage("Invalid credentials");
+            }
+            })
+
         .catch((error) => {
             console.error(error);
         });
+        
     };
-
     return (
             <div>
                 <div className="flex flex-col items-center min-h-screen pt-6 sm:justify-center sm:pt-0 bg-gray-50">
@@ -80,6 +86,7 @@ const Login = () => {
                                 </button>
                             </div>
                         </form>
+                        {errorMessage && <p>{errorMessage}</p>}
                         <div className="mt-4 text-grey-600">
                             Do not have an account Already?{" "}
                             <span>

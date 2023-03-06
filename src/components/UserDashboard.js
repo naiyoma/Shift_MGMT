@@ -93,7 +93,7 @@ export default class MyCalendar extends React.Component {
     return (
     <div class="grid grid-rows-3 grid-flow-col gap-1">
           <div class="row-span-3  profile-div w-72 border-r-4">
-          <div class="bg-fuchsia-900 rounded-b h-24 round-image cover-image-up">
+          <div class="c rounded-b h-24 round-image cover-image-up">
           <div class="flex flex-col items-center justify-between w-36 rounded-sm profile-image ">
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLivrKVFYBG5-dEeF_xB25T5BSDG6W-ooA9w&usqp=CAU" alt="User Image" class=" h-32 rounded-full object-cover user-image"></img>
             </div>

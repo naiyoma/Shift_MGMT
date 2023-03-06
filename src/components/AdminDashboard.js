@@ -59,7 +59,7 @@ class AdminDashboard extends Component {
     const { days, currentDate } = this.state;
 
     const columns = [
-      <div key="employee-name" className="border-r px-4 py-2 first-column bg-slate-400">
+      <div key="employee-name" className="border-r px-4 py-2 first-column bg-slate-200">
         Employee Name
       </div>,
       ...days.map((day) => {
@@ -80,7 +80,7 @@ class AdminDashboard extends Component {
   
     return (
       <div className="container mx-auto">
-        <nav className="bg-gray-800 px-4 py-2">
+        <nav className="bg-fuchsia-300 px-4 py-2">
           <ul className="flex">
             <li className="mr-6">
               <a href="#" className="text-white hover:text-gray-300">
@@ -110,7 +110,7 @@ class AdminDashboard extends Component {
         <div class="grid grid-cols-8 gap-1 mt-1.5">
           {this.state.employees.map((employee, index) => (
             <React.Fragment key={index}>
-              <div className={`bg-slate-400 column-01 h-20 rounded border-b-4 border-indigo-500 stacked-fractions `}><p className='employee-name'>{employee.name}</p></div>
+              <div className={`bg-slate-200 column-01 h-20 rounded border-b-4 border-indigo-500 stacked-fractions `}><p className='employee-name'>{employee.name}</p></div>
               {this.state.days.map((day, index) => {
                 const shift = employee.shifts.find((s) => s.date === day);
                 return (
