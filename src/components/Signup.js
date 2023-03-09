@@ -9,11 +9,11 @@ const Signup = () => {
     const [email, setEmail] = useState("");
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+    const [confirm_password, setConfirmPassword] = useState("");
     const [department, setDepartment] = useState("");
     const [position, setPosition] = useState("");
     const [organizations, setOrganizations] = useState([]);
     const [selectedOrganization, setSelectedOrganization] = useState('');
-    
 
     const navigate = useNavigate();
 
@@ -37,10 +37,11 @@ const Signup = () => {
         const data = {
             username: username,
             password: password,
+            confirm_password: confirm_password,
             email: email,
             is_staff: false,
             department: department,
-            position: position,
+            position: "test position",
             
         };
         axios
@@ -129,6 +130,8 @@ const Signup = () => {
                                     <input
                                         type="password"
                                         name="password_confirmation"
+                                        value = {confirm_password}
+                                        onChange={(event) => setConfirmPassword(event.target.value)}
                                         className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                                         required
                                         />
@@ -154,28 +157,14 @@ const Signup = () => {
                             </div>
                             <div className="mt-4">
                                 <label htmlFor="organization" className="block text-gray-700 text-sm font-bold mb-2">
-                                    Organization
+                                    Select Organization
                                 </label>
                                 <div className="flex flex-col items-start">
-                                    {/* <select
-                                        name="organization"
-                                        value={selectedOrganizations}
-                                        onChange={(event) => setSelectedOrganization(event.target.value)}
-                                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                        required
-                                    >
-                                        <option value="">Select an organization</option>
-                                        {organizations.map((org) => (
-                                            <option key={org.id} value={org.id}>
-                                                {org.name}
-                                            </option>
-                                        ))}
-
-                                    </select> */}
                                      <select
                                         name="organization"
                                         value={selectedOrganization} 
                                         onChange={handleOrganizationChange}
+                                        className= "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                                         // className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                                         required
                                         >
