@@ -16,7 +16,7 @@ const Login = () => {
           password: password,
         };
         axios
-        .post("https://naiyoma.pythonanywhere.com/api/login/", JSON.stringify(data), {
+        .post("https://web-production-fc54.up.railway.app/api/login/", JSON.stringify(data), {
                 headers: {
                     'Content-Type': 'application/json'
                 }
@@ -28,23 +28,28 @@ const Login = () => {
                 navigate("/");
             } else {
                 setErrorMessage("Invalid credentials");
+                console.log("error")
             }
             })
 
         .catch((error) => {
             console.error(error);
+            setErrorMessage("Invalid credentials");
         });
         
     };
     return (
             <div>
+              
                 <div className="flex flex-col items-center min-h-screen pt-6 sm:justify-center sm:pt-0 bg-gray-50">
                     <div className="w-full px-6 py-4 mt-6 overflow-hidden bg-white shadow-md sm:max-w-lg sm:rounded-lg">
+                    {errorMessage && <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4" role="alert">{errorMessage}</div>}
                         <form onSubmit={handleSubmit}>
                             <div>
                                 <label
                                     htmlFor="email"
                                     className="block text-gray-700 text-sm font-bold mb-2"
+                                    
                                 >
                                     Email
                                 </label>
@@ -55,6 +60,7 @@ const Login = () => {
                                         value={email}
                                         onChange={(event) => setEmail(event.target.value)}
                                         className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                        required
                                     />
                                 </div>
                             </div>
@@ -71,7 +77,8 @@ const Login = () => {
                                         name="password"
                                         value = {password}
                                         onChange={(event) => setPassword(event.target.value)}
-                                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"                                    />
+                                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" 
+                                        required                                   />
                                 </div>
                             </div>
                             <a

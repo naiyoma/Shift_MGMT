@@ -29,8 +29,11 @@ const Signup = () => {
     }, []);
     
     const handleOrganizationChange = (event) => {
-        setSelectedOrganization(event.target.value);
-    };
+        const selectedOrg = organizations.find((org) => org.name === event.target.value);
+        setSelectedOrganization(selectedOrg.id);
+      };
+
+    console.log(selectedOrganization)
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -42,10 +45,11 @@ const Signup = () => {
             is_staff: false,
             department: department,
             position: "test position",
+            organization: selectedOrganization
             
         };
         axios
-        .post("https://web-production-fc54.up.railway.app/api/createuser/", JSON.stringify(data), {
+        .post("https://web-production-fc54.up.railway.app/api/createuser/", data, {
                 headers: {
                     'Content-Type': 'application/json'
                 }
@@ -59,6 +63,8 @@ const Signup = () => {
             console.error(error);
         });
     };
+
+
 
     return (
             <div>
